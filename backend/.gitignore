@@ -1,0 +1,43 @@
+# Binaries and build artifacts
+*.exe
+*.out
+*.so
+*.dll
+*.dylib
+*.a
+*.o
+
+# Go modules
+bin/
+pkg/
+vendor/
+go.sum
+go.mod~
+
+# Logs and temp files
+*.log
+*.tmp
+*.swp
+*.swo
+*.bak
+*.db
+
+# Environment variables and secrets
+.env
+.env.local
+.env.production
+.env.development
+
+# IDE and Editor files
+.vscode/
+.idea/
+*.iml
+*.sublime-project
+*.sublime-workspace
+
+# OS-specific files
+.DS_Store
+Thumbs.db
+
+# Gorm database migrations (if using SQLite)
+gorm.db
