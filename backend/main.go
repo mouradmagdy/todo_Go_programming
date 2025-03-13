@@ -3,9 +3,11 @@ package main
 import (
 	"log"
 	"todo-go/config"
-"todo-go/database"
-	"github.com/gin-gonic/gin"
+	"todo-go/database"
 	"todo-go/routes"
+
+	"github.com/gin-contrib/cors"
+	"github.com/gin-gonic/gin"
 )
 
 func main(){
@@ -17,6 +19,14 @@ func main(){
 
 	// init Gin Router
 	router:=gin.Default()
+
+	// cors
+router.Use(cors.New(cors.Config{
+    AllowOrigins:     []string{"http://localhost:5173"}, 
+    AllowMethods:     []string{"GET", "POST", "PUT", "DELETE"},
+    AllowHeaders:     []string{"Origin", "Content-Type", "Authorization"},
+    AllowCredentials: true,
+}))
 
 	// setup routes
 	// function starting with capital letter is exported
