@@ -10,7 +10,7 @@ func SetupRoutes(router *gin.Engine){
 		routes.GET("/",controllers.GetTodos)
 		routes.GET("",controllers.GetTodos)
 		routes.POST("/",controllers.CreateTodo)
-		// routes.PUT("/:id",controllers.UpdateTodo)
-		// routes.DELETE("/:id",controllers.DeleteTodo)
+		routes.PUT("/:id",controllers.UpdateTodo)
+		routes.DELETE("/:id",controllers.DeleteTodo)
 	}
 }
