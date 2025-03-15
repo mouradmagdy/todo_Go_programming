@@ -32,7 +32,8 @@ router.Use(cors.New(cors.Config{
 	// function starting with capital letter is exported
 	// and can be accessed from other packages unlike function starting with small letter
 	// which is private to the package
-	routes.SetupRoutes(router)
+	routes.SetupAuthRoutes(router) // auth routes
+	routes.SetupRoutes(router) // protected todo routes
 
 	router.Run(":8080")
 	log.Println("Server started on port 8080")
